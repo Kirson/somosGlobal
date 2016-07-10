@@ -1,0 +1,32 @@
+<ion-view>
+  <ion-content>
+
+    <div class="card">
+      <div class="item item-divider whiteColor" style="background-color: #555555">
+        Your Cart
+      </div>
+      <div class="item item-text-wrap themeBg" ng-repeat="item in cart track by $index">
+        <div class="whiteColor">
+          Item {{$index+1}}: {{item.dish_n}}
+        </div>
+        <div class="assertive text-right">
+          {{item.price}} Rs
+
+        </div>
+      </div>
+      <div class="item item-divider" ng-click="showTotals()" style="background-color: #555555">
+        <a class="item item-icon-left themeBg" href="#">
+          <i class="icon ion-fork whiteColor"></i>
+
+          <span class="item-note assertive text-left col">
+            Your Total
+          </span>
+          <strong class="item-note whiteColor ng-binding text-right" style="font-size: medium;">
+            {{total}} Rs
+          </strong>
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

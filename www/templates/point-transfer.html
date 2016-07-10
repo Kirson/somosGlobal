@@ -1,0 +1,18 @@
+<ion-view view-title="Transferencia de Puntos">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/material-graphite.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/logo.png');"></div>
+                <h3><a class="light">Transferencia de Puntos</a></h3>
+            </div>
+        </div>
+       
+        <div class="list">
+            <ion-md-input placeholder="Usuario" highlight-color="dark" type="text"></ion-md-input>
+            <ion-md-input placeholder="Puntos a Transferir" highlight-color="dark" type="text"></ion-md-input>
+        </div>
+        <div class="padding">
+            <button ui-sref="app.pointTransferConfirm" class="button button-full button-positive ink">Enviar</button>
+        </div>
+    </ion-content>
+</ion-view>

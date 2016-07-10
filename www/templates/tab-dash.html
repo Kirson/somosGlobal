@@ -1,0 +1,39 @@
+<ion-view view-title="The Food Shop">
+  <ion-content class="has-header" ng-show="user.token == undefined">
+    <div class="row row-center">
+      <h3 class="col text-center whiteColor">Please Sign In to View</h3>
+    </div>
+  </ion-content>
+  <ion-content class="padding" ng-show="user.token !== undefined">
+
+    <div class="row row-center">
+      <h3 class="col text-center whiteColor">Select a Restaurant</h3>
+    </div>
+
+    <div>
+    <ul>
+      <li>
+
+        <div class="list">
+
+          <ion-item ng-repeat="restaurant in restaurants track by $index" class="item item-thumbnail-left item-text-wrap" href="#/tab/dash/{{restaurant.id}}">
+
+            <img ng-src="{{ restaurant.img }}">
+            <h3 class="whiteColor text-right ratingAlignment" ><i class="icon ion-star"></i> {{restaurant.rating}}</h3>
+
+            <h2 class="assertive item-text-wrap" style="font-weight: bold">{{restaurant.name}}</h2>
+            <h5 class="whiteColor" ng-repeat="type in restaurant.type">{{ type }}</h5>
+
+
+
+          </ion-item>
+
+        </div>
+
+      </li>
+
+    </ul>
+      </div>
+
+  </ion-content>
+</ion-view>

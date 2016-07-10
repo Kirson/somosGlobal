@@ -1,0 +1,14 @@
+<ion-view view-title="Categorias">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <ion-list>
+                <ion-item ng-repeat="category in categories" 
+                            class="item item-avatar" href="#/app/categoryDetail/{{category.id}}">
+                            <img ng-src="{{category.face}}">
+                        <h2>{{category.name}}</h2>
+                        <p> ({{category.deseg}})</p>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

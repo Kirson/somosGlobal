@@ -1,0 +1,67 @@
+<ion-view view-title="Detalle de Categorias">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <div class="item card-item"  ng-show="category.id == 0">
+
+               <div class="item item-body" >
+                     <p>
+                        Ejemplo de informacion de categoria 2
+                    </p>
+                    <ul>
+                        <li>
+
+                            <div class="list">
+
+                                <ion-item ng-repeat="restaurant in restaurants track by $index" class="item item-thumbnail-left item-text-wrap" href="#/tab/dash/{{restaurant.id}}">
+
+                                <img ng-src="{{ restaurant.img }}">
+                                <h3 class="whiteColor text-right ratingAlignment" ><i class="icon ion-star"></i> {{restaurant.rating}}</h3>
+
+                                <h2 class="assertive item-text-wrap" style="font-weight: bold">{{restaurant.name}}</h2>
+                                <h5 class="whiteColor" ng-repeat="type in restaurant.type">{{ type }}</h5>
+
+
+
+                                </ion-item>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="item card-item" ng-show="category.id != 0">
+
+                <div class="item item-avatar">
+                    <img src="{{category.face}}">
+                    <h2>{{category.name}}</h2>
+                    <p>{{category.deseg}}</p>
+                </div>
+
+                <div class="item item-body">
+                    <img class="full-image" src="{{category.face}}">
+                    <p>
+                        Ejemplo de informacion de categoria
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                    </p>
+                </div>
+
+                <div class="tabs tabs-dark tabs-icon-top static">
+                    <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
+                    <a class="tab-item" href="#"> <i class="icon ion-chatbox"></i> Comment</a>
+                    <a class="tab-item" href="#"> <i class="icon ion-share"></i>Share</a>
+                </div>
+
+            </div>
+                
+            
+
+        </div>
+    </ion-content>
+</ion-view>
