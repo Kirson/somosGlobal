@@ -17,7 +17,7 @@
             <h2>Somos Global</h2>
         </ion-header-bar>
         <ion-content class="stable-bg has-expanded-header">
-            <ion-list>
+            <ion-list ng-controller="accountsController">
                 <ion-item nav-clear menu-close ui-sref="app.category">
                     Categorias
                 </ion-item>
@@ -45,7 +45,7 @@
                     Galeria
                 </ion-item>
                 -->
-                <ion-item nav-clear menu-close ui-sref="app.login">
+                <ion-item nav-clear menu-close ui-sref="app.login" ng-click="logoutUser();">
                     Salir
                 </ion-item>
             </ion-list>
