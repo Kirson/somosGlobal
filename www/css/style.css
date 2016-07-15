@@ -28,12 +28,16 @@ p {
 ==================================*/
 .menu .bar.bar-header.expanded {
     transition: all .5s ease-in-out;
+
 }
 
 .menu-open .bar.bar-header.expanded {
     background-color: #222;
+    
 }
-
+.bar-header{
+    background: url('../img/barra_menu.png') center !default ;
+}
 .menu h2 {
     bottom: 0;
     font-size: 18px;
@@ -63,17 +67,16 @@ p {
 
 /* Login
 ==================================*/
-.app-icon {
-    background-color: #fff;
-    background: url('../img/logo.png') center;
-    background-size: cover;
-    border-radius: 50%;
-    height: 125px;
-    margin: 0 auto;
-    width: 125px;
-}
-
 .social-login {
     position: fixed;
     bottom: 0;
 }
+
+.app-icon {
+    background: url('../img/logo.png') center;
+    background-size: cover;
+    height: 145px;
+    margin: 0 auto;
+    width: 209px;
+}
+
